@@ -42,7 +42,7 @@ cc_library(
     name = "pistache_lib",
     srcs = glob(["src/**/*.cc"]),
     hdrs = glob(["include/pistache/**/*.h"]),
-    includes = ["."],
+    includes = ["include/"],
     visibility = ["//visibility:public"]
 )""",
     commit = "e18ed9baeb2145af6f9ea41246cf48054ffd9907",
