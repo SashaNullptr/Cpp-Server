@@ -1,13 +1,8 @@
 #include "pistache/endpoint.h"
+#include "endpoint.h"
 
-using namespace Net;
+using namespace Pistache;
 
-class HelloHandler : public Http::Handler {
-public:
-
-    HTTP_PROTOTYPE(HelloHandler)
-
-    void onRequest(const Http::Request& request, Http::ResponseWriter response) {
-        response.send(Http::Code::Ok, "Hello, World");
-    }
+void HelloHandler::onRequest(const Http::Request& request, Http::ResponseWriter response) {
+    response.send(Http::Code::Ok, "Hello, World");
 };
