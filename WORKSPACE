@@ -41,6 +41,7 @@ new_git_repository(
 cc_library(
     name = "pistache_lib",
     srcs = glob(["src/**/*.cc"]),
+    hdrs = glob(["include/pistache/**/*.h"]),
     includes = ["."],
     visibility = ["//visibility:public"]
 )""",
