@@ -10,6 +10,7 @@ load("@io_bazel_rules_docker//cc:image.bzl", "cc_image")
 
 cc_image(
     name = "server",
+    base = "@cc_base_image//image",
     binary = ":bin",
 )
 
