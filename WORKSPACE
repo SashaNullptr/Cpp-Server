@@ -34,8 +34,16 @@ container_pull(
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
+# Pistache HTTP server
 git_repository(
     name = "pistache",
     remote = "https://github.com/oktal/pistache",
     commit = "e18ed9baeb2145af6f9ea41246cf48054ffd9907",
+)
+
+# dependencies for Pistache
+git_repository(
+    name = "rapidjson",
+    remote = "https://github.com/Tencent/rapidjson",
+    commit = "f54b0e47a08782a6131cc3d60f94d038fa6e0a51",
 )
