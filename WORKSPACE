@@ -34,9 +34,16 @@ load(
 
 container_pull(
     name = "cc_base_image",
-    digest = "sha256:f81e5db8287d66b012d874a6f7fea8da5b96d9cc509aa5a9b5d095a604d4bca1",  # 14 October 2019 at 08:21:02 UTC-7
+    digest = "sha256:32c93ea6e867f4deee92912656c77f78f50e6e3d031dbfd85270dd30d75ed1ff",  # 14 October 2019 at 08:21:02 UTC-7
     registry = "gcr.io",
-    repository = "distroless/cc",
+    repository = "distroless/cc-debian10",
+)
+
+container_pull(
+    name = "gcc_base_image",
+    digest = "sha256:bec6098cff5601e7b482febae74cc9508f2ba415ea2604af095ecc1a2b65c66b",  # 7.4
+    registry = "index.docker.io",
+    repository = "library/gcc",
 )
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
