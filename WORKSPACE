@@ -16,6 +16,13 @@ load(
 
 container_repositories()
 
+load(
+    "@io_bazel_rules_docker//cc:image.bzl",
+    cc_image_repos = "repositories",
+)
+
+cc_image_repos()
+
 load("@io_bazel_rules_docker//repositories:deps.bzl", container_deps = "deps")
 
 container_deps()
